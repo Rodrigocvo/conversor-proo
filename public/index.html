@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CONVERSOR PRO</title>
+  <meta name="description" content="Conversor de moedas com BRL, USD, EUR e cripto (BTC, ETH, SOL, MATIC, BNB)">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/icon.png" />
+  <meta name="theme-color" content="#111316"/>
+</head>
+<body class="theme-dark">
+  <header class="topbar">
+    <button id="menuBtn" aria-label="menu">☰</button>
+    <h1>CONVERSOR <b>PRO</b></h1>
+    <button id="editBtn" aria-label="edit">✎</button>
+  </header>
+
+  <div class="updated" id="updatedTxt">—</div>
+
+  <div class="row base">
+    <div class="chip">
+      <img class="flag" src="https://flagcdn.com/w40/br.png" alt="BR"/>
+      <select id="baseCode" aria-label="Moeda de origem">
+        <option value="BRL" selected>BRL</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="SOL">SOL</option>
+        <option value="MATIC">MATIC</option>
+        <option value="BNB">BNB</option>
+      </select>
+    </div>
+    <input id="baseAmount" type="text" inputmode="decimal" value="1" aria-label="Valor a converter" />
+  </div>
+
+  <main id="targets" aria-live="polite">
+    <div class="row">
+      <div class="chip"><img class="flag" src="https://flagcdn.com/w40/us.png" alt="US"/><span>USD</span></div>
+      <div class="value" id="val-USD">—</div>
+      <button class="icon" title="Gráfico">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="flag" src="https://flagcdn.com/w40/eu.png" alt="EU"/><span>EUR</span></div>
+      <div class="value" id="val-EUR">—</div>
+      <button class="icon">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="crypto-icon" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=032" alt="BTC"/><span>BTC</span></div>
+      <div class="value" id="val-BTC">—</div>
+      <button class="icon">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="crypto-icon" src="https://cryptologos.cc/logos/ethereum-eth-logo.png?v=032" alt="ETH"/><span>ETH</span></div>
+      <div class="value" id="val-ETH">—</div>
+      <button class="icon">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="crypto-icon" src="https://cryptologos.cc/logos/solana-sol-logo.png?v=032" alt="SOL"/><span>SOL</span></div>
+      <div class="value" id="val-SOL">—</div>
+      <button class="icon">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="crypto-icon" src="https://cryptologos.cc/logos/polygon-matic-logo.png?v=032" alt="MATIC"/><span>MATIC</span></div>
+      <div class="value" id="val-MATIC">—</div>
+      <button class="icon">📈</button>
+    </div>
+    <div class="row">
+      <div class="chip"><img class="crypto-icon" src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png?v=032" alt="BNB"/><span>BNB</span></div>
+      <div class="value" id="val-BNB">—</div>
+      <button class="icon">📈</button>
+    </div>
+
+    <button id="addBtn" class="add-btn">+ Adicionar moeda</button>
+  </main>
+
+  <nav class="tabs">
+    <button class="active">Conversor</button>
+    <button>Gráficos</button>
+    <button>Scanner de preço</button>
+    <button>Minha taxa</button>
+  </nav>
+
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <h3>Aparência</h3>
+    <label><input type="radio" name="theme" value="system"> Tema do sistema</label>
+    <label><input type="radio" name="theme" value="light"> Tema claro</label>
+    <label><input type="radio" name="theme" value="dark" checked> Tema escuro</label>
+    <h3>Idioma</h3>
+    <select id="lang">
+      <option value="pt" selected>Português</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+    <p class="note">Fiat: ExchangeRate‑API (Open). Cripto: Binance.</p>
+  </aside>
+
+  <script src="/app.js"></script>
+</body>
+</html>

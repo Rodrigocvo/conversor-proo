@@ -1,0 +1,25 @@
+
+:root{ --bg:#111316; --surface:#1A1D22; --primary:#2B3A55; --text:#E5E7EB; --muted:#9097a6; }
+body.theme-light{ --bg:#F5F7FA; --surface:#FFFFFF; --primary:#2B3A55; --text:#111316; --muted:#667085; }
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--text)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--surface)}
+.topbar h1{margin:0;font-size:18px;letter-spacing:.5px}
+.topbar b{font-weight:800}
+.updated{padding:6px 16px;color:var(--muted);font-size:12px}
+.row{display:flex;align-items:center;gap:8px;padding:10px 12px;margin:8px;border-radius:8px;background:#1d2a3a}
+.row.base{background:#1d2a3a}
+.chip{display:flex;align-items:center;gap:8px;background:#1d2a3a;border-radius:6px;padding:6px 8px}
+.flag{width:28px;height:auto;border-radius:3px}
+.crypto-icon{width:24px;height:24px}
+.row .value{margin-left:auto;font-size:16px;font-weight:600}
+.row select,.row input{background:transparent;color:var(--text);border:0;outline:none;font-size:16px}
+.row input{width:100%;padding:6px 8px;border-radius:6px;background:#243040}
+.icon{background:transparent;border:0;color:var(--muted);font-size:16px}
+.add-btn{margin:8px 12px;background:transparent;color:#b9c2d0;border:1px dashed #3a4658;padding:8px 12px;border-radius:6px}
+.tabs{display:flex;justify-content:space-around;padding:8px 12px;border-top:1px solid #2b3342;background:var(--surface)}
+.tabs button{background:transparent;border:0;color:var(--muted);padding:6px 8px}
+.tabs .active{color:#6aa0ff}
+.drawer{position:fixed;inset:0 0 0 auto;width:280px;background:var(--surface);color:var(--text);padding:16px;transform:translateX(100%);transition:.2s}
+.drawer.open{transform:none}
+.note{color:var(--muted);font-size:12px;margin-top:12px}
